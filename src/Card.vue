@@ -1,11 +1,8 @@
 <template>
   <div class="card">
-    <div class="image disable-select">🤔</div>
-    <div>
-      <h1 class="title disable-select">{{ title }}</h1>
-      <p class="message disable-select">{{ message }}</p>
-    </div>
-    <div class="overlay" />
+    <div class="image">🤔</div>
+    <h1 class="title">{{ title }}</h1>
+    <p class="message">{{ message }}</p>
   </div>
 </template>
 
@@ -26,51 +23,40 @@ export default {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  position: relative;
 
   box-shadow: 4px 5px 5px 5px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
 }
-.disable-select {
+.card > *{
   user-select: none;
   pointer-events: none;
   cursor: default;
 }
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  cursor: grab;
-}
+
 @container (min-width: 0px) {
   .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 6px;
+    background-color: white;
   }
   .image {
     display: none;
   }
   .title {
-    font-size: 1.5em;
+    font-size: 18px;
   }
   .message {
-    font-size: 1em;
+    font-size: 14px;
   }
 }
 
 @container (min-width: 300px) {
   .card {
-    color: black;
+    color: red;
     padding: 20px;
 
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: green;
   }
   .image {
     display: block;
@@ -79,31 +65,22 @@ export default {
   }
   .title {
     font-size: 20px;
-    background-color: white;
   }
   .message {
     font-size: 14px;
-    background-color: white;
+    color: white;
   }
 }
+
 @container (min-width: 600px) {
   .card {
-    padding: 20px;
-
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    position: relative;
-    z-index: 5;
+    color: red;
+    background-color: yellow;
   }
   .title {
-    color: yellow;
-    background-color: black;
-    font-size: 40px;
+    font-size: 60px;
   }
   .message {
-    color: black;
-    background-color: white;
     font-size: 26px;
   }
   .image {
@@ -112,7 +89,7 @@ export default {
     top: 0;
     width: 100%;
     height: 100%;
-    font-size: 160px;
+    font-size: 80px;
     z-index: -1;
     opacity: 1;
     background-color: #ffc83d;

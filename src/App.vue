@@ -3,7 +3,7 @@
     <div class="start-zone container">
       <CardSlot
         class="card-slot"
-        :card="getCard('default')"
+        :card="zoneName == 'default' ? card : null"
         @drop="onDrop('default')"
         @start-drag="startDrag"
       />
@@ -24,7 +24,7 @@
         <template v-for="item in ['middle1', 'middle2']" :key="item">
           <CardSlot
             class="card-slot"
-            :card="getCard(item)"
+            :card="zoneName == item ? card : null"
             @drop="onDrop(item)"
             @start-drag="startDrag"
           />
@@ -34,7 +34,7 @@
         <template v-for="item in ['bottom1', 'bottom2', 'bottom3']" :key="item">
           <CardSlot
             class="card-slot"
-            :card="getCard(item)"
+            :card="zoneName == item ? card : null"
             @drop="onDrop(item)"
             @start-drag="startDrag"
           />
@@ -112,6 +112,16 @@ export default {
 
 .container {
   display: flex;
+  width: 100%;
+}
+.top-row {
+  height: 300px;
+}
+.middle-row {
+  height: 200px;
+}
+.bottom-row {
+  height: 200px;
 }
 
 
