@@ -1,8 +1,10 @@
 <template>
   <div class="card">
     <div class="image">🤔</div>
-    <h1 class="title">{{ title }}</h1>
-    <p class="message">{{ message }}</p>
+    <div class="float-right">
+      <h1 class="title">{{ title }}</h1>
+      <p class="message">{{ message }}</p>
+    </div>
   </div>
 </template>
 
@@ -29,13 +31,22 @@ export default {
 
   position: relative;
   background-color: #ffc83d;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .image {
   display: block;
   width: 100%;
   font-size: 80px;
 }
+.float-right {
+  width: 100%;
+}
 .title {
+  width: 100%;
   background-color: black;
   color: #ffc83d;
 }
@@ -51,6 +62,7 @@ export default {
 @container (min-width: 0px) {
   .card {
     padding: 5px;
+    background-color: white;
   }
   .image {
     display: none;
@@ -68,28 +80,29 @@ export default {
 
 @container (min-width: 300px) {
   .card {
-    color: green;
-    padding: 20px;
+    padding: 12px;
 
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: green;
+    background-color: black;
   }
   .image {
-    display: block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
     height: 50%;
-    font-size: 70px;
+    font-size: 60px;
   }
   .title {
     font-size: 20px;
-    color: yellow;
+    color: lightgray;
   }
   .message {
     font-size: 14px;
-    color: white;
-    float: right;
+    color: lightgray;
   }
 }
 
