@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <div class="start-zone container">
+    <div class="start-container">
       <CardSlot
         class="card-slot"
         :card="zoneName == 'default' ? card : null"
@@ -105,25 +105,17 @@ export default {
   height: 600px;
   padding: 6px;
 }
-.start-zone {
-  height: 180px;
-  width: 180px;
-}
+
 
 .container {
   display: flex;
   width: 100%;
 }
-.top-row {
-  height: 300px;
+.start-container {
+  display: flex;
+  width: 180px;
+  height: 180px;
 }
-.middle-row {
-  height: 200px;
-}
-.bottom-row {
-  height: 200px;
-}
-
 
 .top-row {
   height: 300px;

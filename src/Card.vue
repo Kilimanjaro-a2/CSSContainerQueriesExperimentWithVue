@@ -23,7 +23,7 @@ export default {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-
+  background-color: gray;
   box-shadow: 4px 5px 5px 5px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
 }
@@ -35,22 +35,23 @@ export default {
 
 @container (min-width: 0px) {
   .card {
-    background-color: white;
+    background-color: pink;
+    padding: 5px;
   }
   .image {
     display: none;
   }
   .title {
-    font-size: 18px;
+    font-size: 20px;
   }
   .message {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 @container (min-width: 300px) {
   .card {
-    color: red;
+    color: green;
     padding: 20px;
 
     display: flex;
@@ -65,6 +66,7 @@ export default {
   }
   .title {
     font-size: 20px;
+    color: yellow;
   }
   .message {
     font-size: 14px;
@@ -72,29 +74,4 @@ export default {
   }
 }
 
-@container (min-width: 600px) {
-  .card {
-    color: red;
-    background-color: yellow;
-  }
-  .title {
-    font-size: 60px;
-  }
-  .message {
-    font-size: 26px;
-  }
-  .image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 80px;
-    z-index: -1;
-    opacity: 1;
-    background-color: #ffc83d;
-    overflow: hidden;
-    border-radius: inherit;
-  }
-}
 </style>
