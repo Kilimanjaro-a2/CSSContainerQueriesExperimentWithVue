@@ -11,12 +11,14 @@
 
     <div class="containers">
       <div class="top-row container">
-        <CardSlot
-          class="card-slot"
-          :card="getCard('top')"
-          @drop="onDrop('top')"
-          @start-drag="startDrag"
-        />
+        <template v-for="item in ['top']" :key="item">
+          <CardSlot
+            class="card-slot"
+            :card="getCard(item)"
+            @drop="onDrop(item)"
+            @start-drag="startDrag"
+          />
+        </template>
       </div>
       <div class="middle-row container">
         <template v-for="item in ['middle1', 'middle2']" :key="item">
@@ -112,6 +114,16 @@ export default {
   display: flex;
 }
 
+
+.top-row {
+  height: 300px;
+}
+.middle-row {
+  height: 200px;
+}
+.bottom-row {
+  height: 200px;
+}
 .card-slot {
   width: 100%;
   margin: 10px;
@@ -123,14 +135,5 @@ export default {
 
   border: 5px dotted gray;
   border-radius: 1px;
-}
-.top-row {
-  height: 300px;
-}
-.middle-row {
-  height: 200px;
-}
-.bottom-row {
-  height: 200px;
 }
 </style>
