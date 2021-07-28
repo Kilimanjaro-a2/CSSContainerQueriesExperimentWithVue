@@ -11,6 +11,7 @@
 
     <div class="containers">
       <div class="top-row container">
+        <!-- eslint-disable-next-line vue/no-v-for-template-key -->
         <template v-for="item in ['top']" :key="item">
           <CardSlot
             class="card-slot"
@@ -21,6 +22,7 @@
         </template>
       </div>
       <div class="middle-row container">
+        <!-- eslint-disable-next-line vue/no-v-for-template-key -->
         <template v-for="item in ['middle1', 'middle2']" :key="item">
           <CardSlot
             class="card-slot"
@@ -31,6 +33,7 @@
         </template>
       </div>
       <div class="bottom-row container">
+        <!-- eslint-disable-next-line vue/no-v-for-template-key -->
         <template v-for="item in ['bottom1', 'bottom2', 'bottom3']" :key="item">
           <CardSlot
             class="card-slot"
@@ -82,14 +85,13 @@ export default {
 </script>
 
 <style>
-#app {
+.app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-.app {
+
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -105,7 +107,6 @@ export default {
   height: 600px;
   padding: 6px;
 }
-
 
 .container {
   display: flex;
