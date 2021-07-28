@@ -54,7 +54,7 @@ export default {
       zoneName: "default",
       card: {
         title: "Draggable Card",
-        message: "Try to drag and drop this card to the dotted area.",
+        message: "Try to drag and drop this card to other areas.",
       },
       isDragging: false,
     };

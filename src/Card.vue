@@ -26,6 +26,21 @@ export default {
   background-color: gray;
   box-shadow: 4px 5px 5px 5px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
+
+  position: relative;
+  background-color: #ffc83d;
+}
+.image {
+  display: block;
+  width: 100%;
+  font-size: 80px;
+}
+.title {
+  background-color: black;
+  color: #ffc83d;
+}
+.message {
+  font-weight: bold;
 }
 .card > *{
   user-select: none;
@@ -35,7 +50,6 @@ export default {
 
 @container (min-width: 0px) {
   .card {
-    background-color: pink;
     padding: 5px;
   }
   .image {
@@ -43,9 +57,12 @@ export default {
   }
   .title {
     font-size: 20px;
+    background-color: transparent;
+    color: black;
   }
   .message {
     font-size: 16px;
+    font-weight: normal;
   }
 }
 
@@ -62,6 +79,7 @@ export default {
   .image {
     display: block;
     width: 50%;
+    height: 50%;
     font-size: 70px;
   }
   .title {
@@ -71,6 +89,7 @@ export default {
   .message {
     font-size: 14px;
     color: white;
+    float: right;
   }
 }
 
