@@ -53,7 +53,7 @@ export default {
 .message {
   font-weight: bold;
 }
-.card > *{
+.card * {
   user-select: none;
   pointer-events: none;
   cursor: default;
