@@ -8,11 +8,11 @@ Sample project combining CSS Contain and @container queries with Vue SFC, availa
 https://github.com/w3c/csswg-drafts/issues/5796
 
 ## Demo
-Here is a demo page that actually works.
-
-It uses polyfill, so it will work in unsupported browsers.
+![image](https://raw.githubusercontent.com/Kilimanjaro-a2/CSSContainerQueriesExperimentWithVue/images/Animation.gif)
 
 https://kilimanjaro-a2.github.io/CSSContainerQueriesExperimentWithVue/
+
+This uses polyfill, so it will work in unsupported browsers.
 
 
 
