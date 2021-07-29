@@ -1,4 +1,5 @@
+const uri = process.env.GITHUB_REPOSITORY.split("/")
+
 module.exports = {
-  publicPath: process.env.BASE_URL,
-  assetsDir: process.env.BASE_URL
+  publicPath: `https://${uri[0]}.github.io/${uri[1]}/`
 }
